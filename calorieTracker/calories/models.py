@@ -16,7 +16,7 @@ class Food(models.Model):
 
 class Profile(models.Model):
     person_of = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
-    calaries_count = models.FloatField(default=0, null=True, blank=True)
+    calories_count = models.FloatField(default=0, null=True, blank=True)
     food_selected = models.ForeignKey(
         Food, on_delete=models.CASCADE, null=True, blank=True)
     quantity = models.FloatField(default=0)
