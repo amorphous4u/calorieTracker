@@ -79,7 +79,7 @@ def LogoutPage(request):
 
 
 @login_required
-def Select_food(request):
+def select_food(request):
     person = Profile.objects.filter(person_of=request.user).last()
     food_items = Food.objects.filter(person_of=request.user)
     form = SelectFoodForm(request.user, instance=person)
